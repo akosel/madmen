@@ -1,0 +1,551 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='nvd3/css/nv.d3.css'>
+    <link rel='stylesheet' href='nvd3/css/rNVD3.css'>
+    
+    <script src='nvd3/js/jquery-1.8.2.min.js' type='text/javascript'></script>
+    <script src='nvd3/js/d3.v3.min.js' type='text/javascript'></script>
+    <script src='nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+    <script src='nvd3/js/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+	#pagetitle{
+	  padding:50px 0px 0px 100px;
+	}
+    </style>
+    
+  </head>
+  <body>
+	<h1 id='pagetitle'>Mad Men Episode Ratings</h1>
+    <div id='chart1ef0b12474d' class='rChart nvd3'></div>  
+    
+    <script type='text/javascript'>
+ $(document).ready(function(){
+      drawchart1ef0b12474d()
+    });
+    function drawchart1ef0b12474d(){  
+      var opts = {
+ "dom": "chart1ef0b12474d",
+"width":    800,
+"height":    400,
+"x": "Episode_Number",
+"y": "Rating",
+"group": "Season_Number",
+"type": "lineChart",
+"id": "chart1ef0b12474d" 
+},
+        data = [
+ {
+ "Season_Number": 1,
+"Episode_Number":      1,
+"Episode": "Smoke Gets in Your Eyes",
+"Rating":    7.9 
+},
+{
+ "Season_Number": 1,
+"Episode_Number":      2,
+"Episode": "The Wheel",
+"Rating":    8.5 
+},
+{
+ "Season_Number": 1,
+"Episode_Number":      3,
+"Episode": "Ladies Room",
+"Rating":    7.5 
+},
+{
+ "Season_Number": 1,
+"Episode_Number":      4,
+"Episode": "Marriage of Figaro",
+"Rating":    7.7 
+},
+{
+ "Season_Number": 1,
+"Episode_Number":      5,
+"Episode": "New Amsterdam",
+"Rating":    7.8 
+},
+{
+ "Season_Number": 1,
+"Episode_Number":      6,
+"Episode": "5G",
+"Rating":      8 
+},
+{
+ "Season_Number": 1,
+"Episode_Number":      7,
+"Episode": "Babylon",
+"Rating":    7.8 
+},
+{
+ "Season_Number": 1,
+"Episode_Number":      8,
+"Episode": "Red in the Face",
+"Rating":      8 
+},
+{
+ "Season_Number": 1,
+"Episode_Number":      9,
+"Episode": "The Hobo Code",
+"Rating":    8.3 
+},
+{
+ "Season_Number": 1,
+"Episode_Number":     11,
+"Episode": "Long Weekend",
+"Rating":    8.2 
+},
+{
+ "Season_Number": 1,
+"Episode_Number":     12,
+"Episode": "Indian Summer",
+"Rating":    8.1 
+},
+{
+ "Season_Number": 1,
+"Episode_Number":     13,
+"Episode": "Nixon vs. Kennedy",
+"Rating":    8.7 
+},
+{
+ "Season_Number": 2,
+"Episode_Number":      1,
+"Episode": "Shoot",
+"Rating":    8.2 
+},
+{
+ "Season_Number": 2,
+"Episode_Number":      2,
+"Episode": "Meditations in an Emergency",
+"Rating":    8.5 
+},
+{
+ "Season_Number": 2,
+"Episode_Number":      3,
+"Episode": "Flight 1",
+"Rating":    7.9 
+},
+{
+ "Season_Number": 2,
+"Episode_Number":      4,
+"Episode": "The Benefactor",
+"Rating":    7.9 
+},
+{
+ "Season_Number": 2,
+"Episode_Number":      5,
+"Episode": "Three Sundays",
+"Rating":      8 
+},
+{
+ "Season_Number": 2,
+"Episode_Number":      6,
+"Episode": "The New Girl",
+"Rating":    8.3 
+},
+{
+ "Season_Number": 2,
+"Episode_Number":      7,
+"Episode": "Maidenform",
+"Rating":      8 
+},
+{
+ "Season_Number": 2,
+"Episode_Number":      8,
+"Episode": "The Gold Violin",
+"Rating":    8.4 
+},
+{
+ "Season_Number": 2,
+"Episode_Number":      9,
+"Episode": "A Night to Remember",
+"Rating":    8.3 
+},
+{
+ "Season_Number": 2,
+"Episode_Number":     10,
+"Episode": "For Those Who Think Young",
+"Rating":    7.8 
+},
+{
+ "Season_Number": 2,
+"Episode_Number":     11,
+"Episode": "The Inheritance",
+"Rating":      8 
+},
+{
+ "Season_Number": 2,
+"Episode_Number":     12,
+"Episode": "The Jet Set",
+"Rating":    8.2 
+},
+{
+ "Season_Number": 2,
+"Episode_Number":     13,
+"Episode": "The Mountain King",
+"Rating":    8.5 
+},
+{
+ "Season_Number": 3,
+"Episode_Number":      1,
+"Episode": "Six Month Leave",
+"Rating":    8.4 
+},
+{
+ "Season_Number": 3,
+"Episode_Number":      2,
+"Episode": "Shut the Door. Have a Seat",
+"Rating":    8.5 
+},
+{
+ "Season_Number": 3,
+"Episode_Number":      3,
+"Episode": "Love Among the Ruins",
+"Rating":    7.9 
+},
+{
+ "Season_Number": 3,
+"Episode_Number":      4,
+"Episode": "My Old Kentucky Home",
+"Rating":    8.2 
+},
+{
+ "Season_Number": 3,
+"Episode_Number":      5,
+"Episode": "The Arrangements",
+"Rating":    8.2 
+},
+{
+ "Season_Number": 3,
+"Episode_Number":      6,
+"Episode": "The Fog",
+"Rating":      8 
+},
+{
+ "Season_Number": 3,
+"Episode_Number":      7,
+"Episode": "Guy Walks Into an Advertising Agency",
+"Rating":    8.4 
+},
+{
+ "Season_Number": 3,
+"Episode_Number":      8,
+"Episode": "Seven Twenty Three",
+"Rating":    8.4 
+},
+{
+ "Season_Number": 3,
+"Episode_Number":      9,
+"Episode": "Souvenir",
+"Rating":    8.1 
+},
+{
+ "Season_Number": 3,
+"Episode_Number":     10,
+"Episode": "Out of Town",
+"Rating":    8.2 
+},
+{
+ "Season_Number": 3,
+"Episode_Number":     11,
+"Episode": "The Color Blue",
+"Rating":    8.3 
+},
+{
+ "Season_Number": 3,
+"Episode_Number":     12,
+"Episode": "The Gypsy and the Hobo",
+"Rating":    8.4 
+},
+{
+ "Season_Number": 3,
+"Episode_Number":     13,
+"Episode": "The Grown-Ups",
+"Rating":    8.7 
+},
+{
+ "Season_Number": 4,
+"Episode_Number":      1,
+"Episode": "Wee Small Hours",
+"Rating":    8.2 
+},
+{
+ "Season_Number": 4,
+"Episode_Number":      2,
+"Episode": "Tomorrowland",
+"Rating":    8.3 
+},
+{
+ "Season_Number": 4,
+"Episode_Number":      3,
+"Episode": "Christmas Comes But Once a Year",
+"Rating":    8.2 
+},
+{
+ "Season_Number": 4,
+"Episode_Number":      4,
+"Episode": "The Good News",
+"Rating":    8.6 
+},
+{
+ "Season_Number": 4,
+"Episode_Number":      5,
+"Episode": "The Rejected",
+"Rating":    8.3 
+},
+{
+ "Season_Number": 4,
+"Episode_Number":      6,
+"Episode": "The Chrysanthemum and the Sword",
+"Rating":    8.6 
+},
+{
+ "Season_Number": 4,
+"Episode_Number":      7,
+"Episode": "Waldorf Stories",
+"Rating":    8.5 
+},
+{
+ "Season_Number": 4,
+"Episode_Number":      8,
+"Episode": "The Suitcase",
+"Rating":    8.6 
+},
+{
+ "Season_Number": 4,
+"Episode_Number":      9,
+"Episode": "The Summer Man",
+"Rating":    8.5 
+},
+{
+ "Season_Number": 4,
+"Episode_Number":     10,
+"Episode": "Public Relations",
+"Rating":    8.6 
+},
+{
+ "Season_Number": 4,
+"Episode_Number":     11,
+"Episode": "Hands and Knees",
+"Rating":    8.6 
+},
+{
+ "Season_Number": 4,
+"Episode_Number":     12,
+"Episode": "Chinese Wall",
+"Rating":    8.3 
+},
+{
+ "Season_Number": 4,
+"Episode_Number":     13,
+"Episode": "Blowing Smoke",
+"Rating":    8.3 
+},
+{
+ "Season_Number": 5,
+"Episode_Number":      1,
+"Episode": "The Beautiful Girls",
+"Rating":    8.6 
+},
+{
+ "Season_Number": 5,
+"Episode_Number":      2,
+"Episode": "The Phantom",
+"Rating":    8.4 
+},
+{
+ "Season_Number": 5,
+"Episode_Number":      3,
+"Episode": "A Little Kiss, Part 2",
+"Rating":    8.6 
+},
+{
+ "Season_Number": 5,
+"Episode_Number":      4,
+"Episode": "Tea Leaves",
+"Rating":    7.9 
+},
+{
+ "Season_Number": 5,
+"Episode_Number":      5,
+"Episode": "Mystery Date",
+"Rating":    8.5 
+},
+{
+ "Season_Number": 5,
+"Episode_Number":      6,
+"Episode": "Signal 30",
+"Rating":    8.6 
+},
+{
+ "Season_Number": 5,
+"Episode_Number":      7,
+"Episode": "Far Away Places",
+"Rating":    8.5 
+},
+{
+ "Season_Number": 5,
+"Episode_Number":      8,
+"Episode": "At the Codfish Ball",
+"Rating":    8.6 
+},
+{
+ "Season_Number": 5,
+"Episode_Number":      9,
+"Episode": "Lady Lazarus",
+"Rating":    8.2 
+},
+{
+ "Season_Number": 5,
+"Episode_Number":     10,
+"Episode": "A Little Kiss, Part 1",
+"Rating":    8.5 
+},
+{
+ "Season_Number": 5,
+"Episode_Number":     11,
+"Episode": "Christmas Waltz",
+"Rating":    8.2 
+},
+{
+ "Season_Number": 5,
+"Episode_Number":     12,
+"Episode": "The Other Woman",
+"Rating":    8.4 
+},
+{
+ "Season_Number": 5,
+"Episode_Number":     13,
+"Episode": "Commissions and Fees",
+"Rating":    8.3 
+},
+{
+ "Season_Number": 6,
+"Episode_Number":      1,
+"Episode": "Dark Shadows",
+"Rating":    8.2 
+},
+{
+ "Season_Number": 6,
+"Episode_Number":      2,
+"Episode": "In Care Of",
+"Rating":    8.9 
+},
+{
+ "Season_Number": 6,
+"Episode_Number":      3,
+"Episode": "The Doorway, Part 2",
+"Rating":    7.9 
+},
+{
+ "Season_Number": 6,
+"Episode_Number":      4,
+"Episode": "Collaborators",
+"Rating":    8.1 
+},
+{
+ "Season_Number": 6,
+"Episode_Number":      5,
+"Episode": "To Have and to Hold",
+"Rating":    8.3 
+},
+{
+ "Season_Number": 6,
+"Episode_Number":      6,
+"Episode": "The Flood",
+"Rating":    8.2 
+},
+{
+ "Season_Number": 6,
+"Episode_Number":      7,
+"Episode": "For Immediate Release",
+"Rating":    8.8 
+},
+{
+ "Season_Number": 6,
+"Episode_Number":      8,
+"Episode": "Man with a Plan",
+"Rating":    8.2 
+},
+{
+ "Season_Number": 6,
+"Episode_Number":      9,
+"Episode": "The Better Half",
+"Rating":    8.5 
+},
+{
+ "Season_Number": 6,
+"Episode_Number":      9,
+"Episode": "The Crash",
+"Rating":    8.4 
+},
+{
+ "Season_Number": 6,
+"Episode_Number":     10,
+"Episode": "The Doorway, Part 1",
+"Rating":    7.7 
+},
+{
+ "Season_Number": 6,
+"Episode_Number":     11,
+"Episode": "A Tale of Two Cities",
+"Rating":    8.1 
+},
+{
+ "Season_Number": 6,
+"Episode_Number":     12,
+"Episode": "Favors",
+"Rating":    8.6 
+},
+{
+ "Season_Number": 6,
+"Episode_Number":     13,
+"Episode": "The Quality of Mercy",
+"Rating":    8.6 
+} 
+]
+  
+      var data = d3.nest()
+        .key(function(d){
+          return opts.group === undefined ? 'main' : d[opts.group]
+        })
+        .entries(data)
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .x(function(d) { return d[opts.x] + d[opts.group] * 13 })
+          .y(function(d) { return d[opts.y] })
+          .width(opts.width)
+          .height(opts.height)
+		  .tooltipContent(function(key,x,y,e,graph){
+				return '<h1>' + e.point.Episode + '</h1>' + '<br>' + '<h2>Rating: ' + y + '</h2>' + '<br>' + '<h2>Season ' + e.point.Season_Number + ' | Episode ' + e.point.Episode_Number + '</h2>';
+		  });
+         
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+	   /*d3.select('#' + opts.id)
+		  .append("text")
+		  .attr("x", 200)             
+		  .attr("y", 100)
+		  .attr("text-anchor", "middle")  
+		  .text("Mad Men Episode Ratings");*/
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+    
+  </body>
+</html>
